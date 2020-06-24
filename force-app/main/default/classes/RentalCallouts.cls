@@ -6,7 +6,7 @@ public class RentalCallouts {
                 
         Http http = new Http();
         HttpRequest request = new HttpRequest();
-        request.setEndpoint('https://vpic.nhtsa.dot.gov/api/vehicles/getmanufacturerdetails/'+make+'?format='+format);
+        request.setEndpoint('https://vpic.nhtsa.dot.gov/api/vehicles/GetVehicleTypesForMake/'+make+'?format='+format);
         request.setMethod('GET');
         HttpResponse response = http.send(request);
         // If the request is successful, parse the JSON response.
