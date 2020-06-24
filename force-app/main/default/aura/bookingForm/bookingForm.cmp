@@ -1,0 +1,54 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes" access="global" controller="BookingController"  >  
+    <aura:attribute name="newBooking" type="Booking__c"
+         default="{ 'sobjectType': 'Booking__c',
+                        'CarType__c': '',
+                        'Start_Date__c': '',
+                        'End_Date__c': ''
+                         }"/>
+    
+
+    <!--Component to retrieve Names of the types-->
+    <aura:attribute name="picklistValues" type="Object" />
+    <c:TypePicklist sObjectName="Car_Type__c" fieldName="Type__c" picklistValues="{!v.picklistValues}" />
+
+
+     <!-- CREATE NEW Booking -->
+    <div aria-labelledby="newbookingform">
+        <!-- BOXED AREA -->
+        <fieldset class="slds-box slds-theme--default slds-container--small">
+        <legend id="newbookingform" class="slds-text-heading--small 
+          slds-p-vertical--medium">
+          New Booking
+        </legend>
+  
+        <!-- CREATE NEW Booking FORM -->
+        <form class="slds-form--stacked">          
+            <!-- <lightning:input aura:id="bookingform" label="Car Type"
+                             name="cartype"
+                             value="{!v.newBooking.CarType__c}"
+                             required="true"/> --> 
+            <lightning:select aura:id="bookingform1" label="Car Type" name="cartype" onchange="{!c.onChange}">
+                <aura:iteration items="{!v.picklistValues}" var="item">
+                  <option value="{!v.item}">{!item}</option>
+                </aura:iteration>
+            </lightning:select>
+            <lightning:input type="date" aura:id="bookingform" label="Start Date"
+                             name="startdate"
+                             value="{!v.newBooking.Start_Date__c}"/>
+            <lightning:input type="date" aura:id="bookingform" label="End Date"
+                             name="enddate"
+                             value="{!v.newBooking.End_Date__c}"/>
+
+            <lightning:button label="Create Booking" 
+                              class="slds-m-top--medium"
+                              variant="brand"
+                              onclick="{!c.clickCreate}"/>
+        </form>
+        <!-- / CREATE NEW BOOKING FORM -->
+  
+      </fieldset>
+      <!-- / BOXED AREA -->
+    </div>
+    <!-- / CREATE NEW BOOKING -->
+	
+</aura:component>
