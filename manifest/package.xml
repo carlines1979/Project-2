@@ -5,6 +5,7 @@
         <members>CarTypeController</members>
         <members>CarController</members>
         <members>pickListController</members>
+        <members>RentalCallouts</members>
         <name>ApexClass</name>
     </types>
     <types>

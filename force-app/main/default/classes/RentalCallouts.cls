@@ -1,7 +1,7 @@
 public class RentalCallouts {
     @AuraEnabled
-    public static Object makeGetCallout(String make) {
-        Object first=null;
+    public static List<Object> makeGetCallout(String make) {
+		List<Object> vehicleTypes = new List<Object>();
         String format = 'JSON'; 
                 
         Http http = new Http();
@@ -13,17 +13,15 @@ public class RentalCallouts {
         if (response.getStatusCode() == 200) {
             // Deserializes the JSON string into collections of primitive data types.
             Map<String, Object> results = (Map<String, Object>) JSON.deserializeUntyped(response.getBody());
-            // Cast the values in the 'animals' key as a list
-            List<Object> vehicles = (List<Object>) results.get('Results');
-            System.debug('Received the following vehicles:');
-            for (Object vehicle: vehicles) {
+            // Cast the values in the 'Results' key as a list
+            vehicleTypes = (List<Object>) results.get('Results');
+            System.debug('Received the following vehicles Types:');
+            for (Object vehicle: vehicleTypes) {
                 System.debug(vehicle);
             }
-            System.debug('THIS IS THE FIRST vehicle:');
-            first = vehicles.get(0); 
-            System.debug(first);
+
         }
-        return first;
+        return vehicleTypes;
     }
 
 }
