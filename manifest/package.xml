@@ -50,5 +50,9 @@
         <members>Booking_Path</members>
         <name>PathAssistant</name> 
     </types>
+    <types>
+        <members>UpdateContactInfo</members>
+        <name>Flow</name> 
+    </types>
     <version>48.0</version>
 </Package>
