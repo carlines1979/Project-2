@@ -30,7 +30,7 @@
         <profile>admin</profile>
         <profile>customer community user</profile>
         <profile>customer community login user</profile>
-        <profile>customer community cloned</profile>
+        <profile>Customer Community Cloned</profile>
     </networkMemberGroups>
     <networkPageOverrides>
         <changePasswordPageOverrideSetting>Standard</changePasswordPageOverrideSetting>

@@ -10,7 +10,7 @@ public with sharing class BookingController {
         System.debug('userContactId');
         return [SELECT Id, Name, Car__r.Brand__c, Car__r.Model__c, Start_Date__c, End_Date__c, Total_Price__c
                 			FROM Booking__c 
-               				//WHERE Contact__c = :userContactId.ContactId
+               				WHERE Contact__c = :userContactId.ContactId
                				];
     }
     
@@ -23,8 +23,8 @@ public with sharing class BookingController {
             User userContactId = [Select Contact.id FROM USER WHERE ID = :userId] ;
             
             List<Car_Type__c> cartypelist = [SELECT Id FROM  Car_type__c WHERE Type__c = :booking.CarType__c]; 
-            //booking.Contact__c = userContactId.ContactId;  
-            booking.Contact__c = '0033h000008amJTAAY'; 
+            booking.Contact__c = userContactId.ContactId;  
+            //booking.Contact__c = '0033h000008amJTAAY'; 
             
             Car_Type__c ct = cartypelist[0];
             booking.CarType__c = ct.Id; 

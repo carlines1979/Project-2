@@ -38,5 +38,9 @@
         <members>CBRental_Car1</members>
         <name>SiteDotCom</name>
     </types>
+    <types>
+        <members>Customer Community Cloned</members>
+        <name>Profile</name>
+    </types>
     <version>48.0</version>
 </Package>
