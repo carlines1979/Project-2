@@ -14,9 +14,9 @@
         <members>UserBookings</members>
         <members>Cars</members>
         <members>TypePicklist</members>
+        <members>MakeInfo</members>
+        <members>DisplayMakeInfo</members>
         <name>AuraDefinitionBundle</name>
-        <name>MakeInfo</name>
-        <name>DisplayMakeInfo</name>
     </types>
     <types>
         <members>Car__c</members>
@@ -27,7 +27,7 @@
         <name>CustomObject</name>
     </types>
     <types>
-        <members>CBRental_Car</members>
+        <members>CBRental Car</members>
         <name>Network</name>
     </types>
     <types>

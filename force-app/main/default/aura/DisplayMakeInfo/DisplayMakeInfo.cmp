@@ -1,0 +1,23 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes" access="global" controller="RentalCallouts">
+    <!-- Attribute from MakeInfo component -->
+    <aura:attribute name="selectedMake" type="String" required="true"/>
+    <!-- attributes -->
+    <aura:attribute name="data" type="Object[]"/>
+    <aura:attribute name="columns" type="List"/>
+    
+    <!-- handlers-->
+    <aura:handler name="init" value="{! this }" action="{! c.init }"/>
+    <aura:handler name="change" value="{!v.selectedMake}" action="{!c.selectedMakeChange}"/>
+    
+	<!-- the container element determine the height of the datatable -->
+    <div style="height: 300px">
+        <fieldset class="slds-box slds-theme--default ">
+        <lightning:datatable
+                keyField="id"
+                data="{! v.data }"
+                columns="{! v.columns }"
+                hideCheckboxColumn="true"/>
+     	</fieldset>
+    </div>
+	
+</aura:component>

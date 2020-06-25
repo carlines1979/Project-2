@@ -1,0 +1,33 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes" access="global" >
+    <!--Component to select a brand-->
+    <aura:attribute name="brandselected" type="String" default="" />
+    <aura:attribute name="display" type="boolean" default="false"/>
+    
+    <!--Component to retrieve Names of brands-->
+    <aura:attribute name="picklistValues" type="Object" />
+    <c:TypePicklist sObjectName="Car__c" fieldName="Brand__c" picklistValues="{!v.picklistValues}" />
+    
+    <div aria-labelledby="newbookingform">
+        <!-- BOXED AREA -->
+        <fieldset class="slds-box slds-theme--default slds-container--small">
+            <legend id="makeinfo" class="slds-text-heading--small 
+                                         slds-p-vertical--medium">
+                Want to Know more about our brands?
+            </legend>
+            <form class="slds-form--stacked">          
+            <lightning:select aura:id="selectmake" label="Brand" name="brand" onchange="{!c.onChange}">
+                <aura:iteration items="{!v.picklistValues}" var="item">
+                  <option value="{!v.item}">{!item}</option>
+                </aura:iteration>
+            </lightning:select>
+            </form>           
+        </fieldset>
+        <!-- / BOXED AREA -->
+    </div>
+    
+    <aura:if isTrue="{!v.display}">
+        <c:DisplayMakeInfo selectedMake="{! v.brandselected }" /> 
+    	
+    </aura:if>
+	
+</aura:component>

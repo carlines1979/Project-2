@@ -23,10 +23,6 @@
   
         <!-- CREATE NEW Booking FORM -->
         <form class="slds-form--stacked">          
-            <!-- <lightning:input aura:id="bookingform" label="Car Type"
-                             name="cartype"
-                             value="{!v.newBooking.CarType__c}"
-                             required="true"/> --> 
             <lightning:select aura:id="bookingform1" label="Car Type" name="cartype" onchange="{!c.onChange}">
                 <aura:iteration items="{!v.picklistValues}" var="item">
                   <option value="{!v.item}">{!item}</option>

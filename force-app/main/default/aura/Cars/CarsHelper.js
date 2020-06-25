@@ -4,7 +4,7 @@
             	{label: 'Make', fieldName: 'Brand__c', type: 'text'},
             	{label: 'Model', fieldName: 'Model__c', type: 'text'},
                 {label: 'Year', fieldName: 'Year__c', type: 'text'},
-            	{label: 'Car Type', fieldName: 'Car_Type__c', type: 'text'}
+            	{label: 'Car Type', fieldName: 'CarType__r.Type__c', type: 'text'}
             ]);
         var action = component.get("c.getCars");
         action.setParams({});
