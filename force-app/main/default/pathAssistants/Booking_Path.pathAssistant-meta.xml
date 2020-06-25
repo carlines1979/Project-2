@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathAssistant xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <entityName>Booking__c</entityName>
+    <fieldName>Stage__c</fieldName>
+    <masterLabel>Booking Path</masterLabel>
+    <pathAssistantSteps>
+        <fieldNames>Contact__c</fieldNames>
+        <info>&lt;p&gt;No more steps. Booking Cancelled.&lt;/p&gt;</info>
+        <picklistValueName>Canceled</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>Contact__c</fieldNames>
+        <fieldNames>Start_Date__c</fieldNames>
+        <fieldNames>Car__c</fieldNames>
+        <fieldNames>CarType__c</fieldNames>
+        <info>&lt;p&gt;Next Step is Car Delivered to the customer.&lt;/p&gt;</info>
+        <picklistValueName>Car Assigned</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>Contact__c</fieldNames>
+        <fieldNames>Car__c</fieldNames>
+        <fieldNames>CarType__c</fieldNames>
+        <fieldNames>Start_Date__c</fieldNames>
+        <fieldNames>End_Date__c</fieldNames>
+        <info>&lt;p&gt;Change Stage when car returned the End Date. &lt;/p&gt;</info>
+        <picklistValueName>Car Delivered</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>Contact__c</fieldNames>
+        <fieldNames>Car__c</fieldNames>
+        <fieldNames>CarType__c</fieldNames>
+        <fieldNames>Start_Date__c</fieldNames>
+        <fieldNames>End_Date__c</fieldNames>
+        <info>&lt;p&gt;Car Returned. Car Status back to Free&lt;/p&gt;</info>
+        <picklistValueName>Car Returned</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <fieldNames>Contact__c</fieldNames>
+        <fieldNames>Start_Date__c</fieldNames>
+        <fieldNames>CarType__c</fieldNames>
+        <info>&lt;p&gt;Booking started. A task have been created for Assign a Car.&lt;/p&gt;&lt;p&gt;Assign a Car.&lt;/p&gt;</info>
+        <picklistValueName>Started</picklistValueName>
+    </pathAssistantSteps>
+    <recordTypeName>__MASTER__</recordTypeName>
+</PathAssistant>

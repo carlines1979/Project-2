@@ -42,5 +42,13 @@
         <members>Customer Community Cloned</members>
         <name>Profile</name>
     </types>
+    <types>
+        <members>Booking__c</members>
+        <name>Workflow</name>
+    </types>
+    <types>
+        <members>Booking_Path</members>
+        <name>PathAssistant</name> 
+    </types>
     <version>48.0</version>
 </Package>

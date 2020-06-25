@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Stage__c</fullName>
+    <externalId>false</externalId>
+    <label>Stage</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Started</fullName>
+                <default>true</default>
+                <label>Started</label>
+            </value>
+            <value>
+                <fullName>Car Assigned</fullName>
+                <default>false</default>
+                <label>Car Assigned</label>
+            </value>
+            <value>
+                <fullName>Canceled</fullName>
+                <default>false</default>
+                <label>Canceled</label>
+            </value>
+            <value>
+                <fullName>Car Delivered</fullName>
+                <default>false</default>
+                <label>Car Delivered</label>
+            </value>
+            <value>
+                <fullName>Car Returned</fullName>
+                <default>false</default>
+                <label>Car Returned</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

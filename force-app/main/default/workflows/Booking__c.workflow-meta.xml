@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <rules>
+        <fullName>Assign Car New Booking</fullName>
+        <actions>
+            <name>Assign_Car_to_Booking</name>
+            <type>Task</type>
+        </actions>
+        <active>true</active>
+        <formula>ISBLANK( Car__c )  ||  ISNULL(Car__c)</formula>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <tasks>
+        <fullName>Assign_Car_to_Booking</fullName>
+        <assignedTo>cabermudezr@wise-badger-1dzx2g.com</assignedTo>
+        <assignedToType>user</assignedToType>
+        <description>Booking starts tomorrow, assign a Car. NOW!</description>
+        <dueDateOffset>-1</dueDateOffset>
+        <notifyAssignee>false</notifyAssignee>
+        <offsetFromField>Booking__c.Start_Date__c</offsetFromField>
+        <priority>High</priority>
+        <protected>false</protected>
+        <status>Not Started</status>
+        <subject>Assign Car to Booking</subject>
+    </tasks>
+</Workflow>
