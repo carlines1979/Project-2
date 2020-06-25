@@ -15,6 +15,8 @@
         <members>Cars</members>
         <members>TypePicklist</members>
         <name>AuraDefinitionBundle</name>
+        <name>MakeInfo</name>
+        <name>DisplayMakeInfo</name>
     </types>
     <types>
         <members>Car__c</members>
