@@ -7,9 +7,10 @@ public with sharing class BookingController {
 		ID userId = System.UserInfo.getUserId();        
         User userContactId = [Select Contact.id FROM USER WHERE ID = :userId] ;
         
-        return [SELECT Id, Name, Car__r.Brand__c, Car__r.Model__c, Start_Date__c, End_Date__c, Total_Price__c
+        return [SELECT Id, Name, Car__r.Brand__c, Car__r.Model__c, CarType__r.Type__c, Start_Date__c, End_Date__c, Total_Price__c
                 			FROM Booking__c 
-               				WHERE Contact__c = :userContactId.ContactId];
+               				WHERE Contact__c = :userContactId.ContactId
+               				ORDER BY Start_Date__c];
        
     }
     

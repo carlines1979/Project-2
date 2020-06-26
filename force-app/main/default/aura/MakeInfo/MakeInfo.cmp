@@ -7,7 +7,7 @@
     <aura:attribute name="picklistValues" type="Object" />
     <c:TypePicklist sObjectName="Car__c" fieldName="Brand__c" picklistValues="{!v.picklistValues}" />
     
-    <div aria-labelledby="newbookingform">
+    <div aria-labelledby="newmakeform">
         <!-- BOXED AREA -->
         <fieldset class="slds-box slds-theme--default slds-container--small">
             <legend id="makeinfo" class="slds-text-heading--small 
@@ -20,7 +20,8 @@
                   <option value="{!v.item}">{!item}</option>
                 </aura:iteration>
             </lightning:select>
-            </form>           
+            </form>  
+            
         </fieldset>
         <!-- / BOXED AREA -->
     </div>

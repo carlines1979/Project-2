@@ -3,6 +3,7 @@
         component.set('v.columns', [
             	{label: 'Brand', fieldName: 'CarBrand', type: 'text'},
             	{label: 'Model', fieldName: 'CarModel', type: 'text'},
+           		{label: 'Car Type', fieldName: 'CarType', type: 'text'},
                 {label: 'Start Date', fieldName: 'Start_Date__c', type: 'date'},
                 {label: 'End Date', fieldName: 'End_Date__c', type: 'date'},
                 {label: 'Total Price', fieldName: 'Total_Price__c', type: 'currency'}
@@ -18,6 +19,9 @@
                     if (row.Car__c) {
                      	row.CarBrand = row.Car__r.Brand__c;
                     	row.CarModel = row.Car__r.Model__c;   
+                    } 
+                    if (row.CarType__c) {
+                        row.CarType = row.CarType__r.Type__c; 
                     } 
                 component.set("v.data", rows);        
            		}
