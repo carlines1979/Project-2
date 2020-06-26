@@ -18,7 +18,7 @@
             } else if (state === "ERROR") {
                 let errors = response.getError();
                 let message = 'Unknown error'; // Default error message
-                // Retrieve the error message sent by the server
+                // Retrieve the error message sent by the server.
                 if (errors && Array.isArray(errors) && errors.length > 0) {
                     message = errors[0].message;
                 }

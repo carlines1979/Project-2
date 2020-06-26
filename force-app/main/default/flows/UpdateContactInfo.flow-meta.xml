@@ -19,6 +19,41 @@
                 <elementReference>newPhone</elementReference>
             </value>
         </assignmentItems>
+        <assignmentItems>
+            <assignToReference>GetContact.MailingCity</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>newcity</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>GetContact.MailingCountry</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>newcountry</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>GetContact.MailingPostalCode</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>newpostalcode</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>GetContact.MailingState</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>newstate</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>GetContact.MailingStreet</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>newstreet</elementReference>
+            </value>
+        </assignmentItems>
         <connector>
             <targetReference>updateContact</targetReference>
         </connector>
@@ -88,8 +123,8 @@
     <recordUpdates>
         <name>updateContact</name>
         <label>updateContact</label>
-        <locationX>325</locationX>
-        <locationY>223</locationY>
+        <locationX>328</locationX>
+        <locationY>225</locationY>
         <inputReference>GetContact</inputReference>
     </recordUpdates>
     <runInMode>DefaultMode</runInMode>
@@ -160,6 +195,62 @@
                 <name>value</name>
             </outputParameters>
         </fields>
+        <fields>
+            <name>contactAddress</name>
+            <extensionName>flowruntime:address</extensionName>
+            <fieldType>ComponentInstance</fieldType>
+            <inputParameters>
+                <name>city</name>
+                <value>
+                    <elementReference>GetContact.MailingCity</elementReference>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>country</name>
+                <value>
+                    <elementReference>GetContact.MailingCountry</elementReference>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>postalCode</name>
+                <value>
+                    <elementReference>GetContact.MailingPostalCode</elementReference>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>province</name>
+                <value>
+                    <elementReference>GetContact.MailingState</elementReference>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>street</name>
+                <value>
+                    <elementReference>GetContact.MailingStreet</elementReference>
+                </value>
+            </inputParameters>
+            <isRequired>true</isRequired>
+            <outputParameters>
+                <assignToReference>newcity</assignToReference>
+                <name>city</name>
+            </outputParameters>
+            <outputParameters>
+                <assignToReference>newcountry</assignToReference>
+                <name>country</name>
+            </outputParameters>
+            <outputParameters>
+                <assignToReference>newpostalcode</assignToReference>
+                <name>postalCode</name>
+            </outputParameters>
+            <outputParameters>
+                <assignToReference>newstate</assignToReference>
+                <name>province</name>
+            </outputParameters>
+            <outputParameters>
+                <assignToReference>newstreet</assignToReference>
+                <name>street</name>
+            </outputParameters>
+        </fields>
         <showFooter>true</showFooter>
         <showHeader>false</showHeader>
     </screens>
@@ -172,6 +263,20 @@
     </start>
     <status>Active</status>
     <variables>
+        <name>newcity</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>newcountry</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
         <name>newemail</name>
         <dataType>String</dataType>
         <isCollection>false</isCollection>
@@ -180,6 +285,27 @@
     </variables>
     <variables>
         <name>newPhone</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>newpostalcode</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>newstate</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>newstreet</name>
         <dataType>String</dataType>
         <isCollection>false</isCollection>
         <isInput>false</isInput>

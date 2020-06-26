@@ -52,6 +52,7 @@
     </div>
         <div aria-labelledby="newbookingformimage" class="slds-theme--default slds-container--small slds-col slds-size_2-of-2" >
         	<br></br>
+            <br></br>
         	<img  src="{!$Resource.Camaro}" /> 
         </div>
     </div>

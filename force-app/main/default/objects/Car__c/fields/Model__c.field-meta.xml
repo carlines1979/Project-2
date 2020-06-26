@@ -72,6 +72,11 @@
                 <default>false</default>
                 <label>Lx</label>
             </value>
+            <value>
+                <fullName>CR-V</fullName>
+                <default>false</default>
+                <label>CR-V</label>
+            </value>
         </valueSetDefinition>
         <valueSettings>
             <controllingFieldValue>Chevrolet</controllingFieldValue>
@@ -96,6 +101,10 @@
         <valueSettings>
             <controllingFieldValue>Honda</controllingFieldValue>
             <valueName>Accord</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Honda</controllingFieldValue>
+            <valueName>CR-V</valueName>
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>KIA</controllingFieldValue>

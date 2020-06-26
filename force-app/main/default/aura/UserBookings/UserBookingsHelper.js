@@ -21,6 +21,15 @@
                     } 
                 component.set("v.data", rows);        
            		}
+            } else {
+                //UNSuccess message display logic.
+                var toastEvent = $A.get("e.force:showToast");
+                toastEvent.setParams({
+                    "title": "ERROR!",
+                    "message": "Something went wrong. Please, try again later!"
+                    
+				});
+                toastEvent.fire();
             }
         });
         $A.enqueueAction(action);
