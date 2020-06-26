@@ -24,7 +24,8 @@
                 var toastEvent = $A.get("e.force:showToast");
                 toastEvent.setParams({
                     "title": "ERROR!",
-                    "message": message                  
+                    "message": message,
+                    "type" : 'error'
 				});
                 toastEvent.fire();
                 

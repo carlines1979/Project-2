@@ -12,7 +12,8 @@
                 var toastEvent = $A.get("e.force:showToast");
                 toastEvent.setParams({
                     "title": "Success!",
-                    "message": "Booking created, Thank you for your business!"
+                    "message": "Booking created, Thank you for your business!",
+                    "type": 'success'
                 });
                 toastEvent.fire();
             } else if (state === "ERROR") {
@@ -25,7 +26,8 @@
                 var toastEvent = $A.get("e.force:showToast");
                 toastEvent.setParams({
                     "title": "ERROR!",
-                    "message": message                  
+                    "message": message, 
+                    "type" : 'error'
 				});
                 toastEvent.fire();
                 

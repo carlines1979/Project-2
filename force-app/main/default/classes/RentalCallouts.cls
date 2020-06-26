@@ -20,6 +20,8 @@ public class RentalCallouts {
                 System.debug(vehicle);
             }
 
+        } else {
+            new AuraHandledException('Sorry, nhtsa.dot.gov is not responding at this time, Error code: ' + response.getStatusCode());
         }
         return vehicleTypes;
     }
