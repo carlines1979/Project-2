@@ -4,7 +4,7 @@
             	{label: 'Make', fieldName: 'Brand__c', type: 'text'},
             	{label: 'Model', fieldName: 'Model__c', type: 'text'},
                 {label: 'Year', fieldName: 'Year__c', type: 'text'},
-            	{label: 'Car Type', fieldName: 'CarType', type: 'text'}
+            	{label: 'Car Type', fieldName: 'Type__c', type: 'text'}
             ]);
         var action = component.get("c.getCars");
         action.setParams({});
@@ -12,14 +12,32 @@
             var state = response.getState();
             if (state === "SUCCESS") {
                 var rows = response.getReturnValue();
-                for (var i = 0; i < rows.length; i++) {
-                	var row = rows[i];
-                    if (row.CarType__c) {
-                     	row.CarType = row.CarType__r.Type__c;
-                    } 
+                component.set("v.data", rows); 
+                
+           	} else if (state === "ERROR") {
+                let errors = response.getError();
+                let message = 'Unknown error'; // Default error message
+                // Retrieve the error message sent by the server.
+                if (errors && Array.isArray(errors) && errors.length > 0) {
+                    message = errors[0].message;
                 }
-                component.set("v.data", rows);        
-           	}
+                var toastEvent = $A.get("e.force:showToast");
+                toastEvent.setParams({
+                    "title": "ERROR!",
+                    "message": message                  
+				});
+                toastEvent.fire();
+                
+            } else {
+                //UNSuccess message display logic.
+                var toastEvent = $A.get("e.force:showToast");
+                toastEvent.setParams({
+                    "title": "ERROR!",
+                    "message": "Something went wrong. Please, try again later!"
+                    
+				});
+                toastEvent.fire();
+            }
         });
         $A.enqueueAction(action);
     }
