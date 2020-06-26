@@ -11,9 +11,9 @@
     <aura:attribute name="picklistValues" type="Object" />
     <c:TypePicklist sObjectName="Car_Type__c" fieldName="Type__c" picklistValues="{!v.picklistValues}" />
 
-
+	<div class="slds-grid slds-gutters"> 
      <!-- CREATE NEW Booking -->
-    <div aria-labelledby="newbookingform">
+    <div aria-labelledby="newbookingform" class="slds-col slds-size_1-of-2" >
         <!-- BOXED AREA -->
         <fieldset class="slds-box slds-theme--default slds-container--small">
         <legend id="newbookingform" class="slds-text-heading--small 
@@ -39,12 +39,23 @@
                               class="slds-m-top--medium"
                               variant="brand"
                               onclick="{!c.clickCreate}"/>
+            
+                       
         </form>
         <!-- / CREATE NEW BOOKING FORM -->
-  
+  		
       </fieldset>
       <!-- / BOXED AREA -->
+       
+     
+ 
+    </div>
+        <div aria-labelledby="newbookingformimage" class="slds-theme--default slds-container--small slds-col slds-size_2-of-2" >
+        	<br></br>
+        	<img  src="{!$Resource.Camaro}" /> 
+        </div>
     </div>
     <!-- / CREATE NEW BOOKING -->
-	
+    
+   
 </aura:component>

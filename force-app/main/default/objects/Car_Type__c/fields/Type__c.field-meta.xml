@@ -51,6 +51,11 @@
                 <default>false</default>
                 <label>Muscle Car</label>
             </value>
+            <value>
+                <fullName>Compact</fullName>
+                <default>false</default>
+                <label>Compact</label>
+            </value>
         </valueSetDefinition>
     </valueSet>
 </CustomField>
