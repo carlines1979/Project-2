@@ -52,6 +52,7 @@
     </types>
     <types>
         <members>UpdateContactInfo</members>
+        <members>New_Case</members>
         <name>Flow</name> 
     </types>
     <types>
