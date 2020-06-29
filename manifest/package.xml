@@ -59,5 +59,16 @@
         <members>Camaro</members>
         <name>StaticResource</name> 
     </types>
+    <types>
+        <members>CBRental_Car</members>
+        <name>CustomApplication</name>
+    </types>
+    <types>
+        <members>Car__c</members>
+        <members>Car_Type__c</members>
+        <members>Location__c</members>
+        <members>Booking__c</members>
+        <name>CustomTab</name>
+    </types>
     <version>48.0</version>
 </Package>

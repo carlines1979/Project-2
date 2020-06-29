@@ -24,7 +24,7 @@
         <name>insertCase</name>
         <label>insertCase</label>
         <locationX>458</locationX>
-        <locationY>50</locationY>
+        <locationY>49</locationY>
         <connector>
             <targetReference>SuccessEnd</targetReference>
         </connector>
@@ -144,7 +144,7 @@
     <screens>
         <name>FailEnd</name>
         <label>FailEnd</label>
-        <locationX>452</locationX>
+        <locationX>459</locationX>
         <locationY>211</locationY>
         <allowBack>false</allowBack>
         <allowFinish>true</allowFinish>
